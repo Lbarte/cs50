@@ -30,10 +30,6 @@ int main(void)
         {
             printf("#");
         }
-        for (int spaceCounter = userNumber - i; spaceCounter > 0; spaceCounter--)
-        {
-            printf(" ");
-        }
         printf("\n");
     }
 }
