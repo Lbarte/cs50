@@ -25,7 +25,9 @@ int main(void)
         {
             printf("#");
         }
+        //spaces between pyramids
         printf("  ");
+        //printing hashes-(pyramid row) again
         for (int hashCounter = i; hashCounter > 0; hashCounter--)
         {
             printf("#");
