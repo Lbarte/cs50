@@ -71,6 +71,5 @@ int main(void)
     } while (coinsOwed > 0);
 
     // output
-    printf("Here is how much minimum coins we should give to the customer:\n");
     printf("%i\n", coinsCounter);
 }
