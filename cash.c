@@ -12,7 +12,8 @@ int main(void)
     do
     {
         owedSum = get_float("How much is owed?\n");
-    } while (owedSum <= 0.0);
+    }
+    while (owedSum <= 0.0);
 
     int coinsOwed = round(owedSum * 100);
     int coinsCounter = 0;
@@ -29,7 +30,8 @@ int main(void)
             coinsWeCanGive = coinsOwed - (coinsOwed % 25);
             coinsCounter += coinsWeCanGive / 25;
             coinsOwed -= coinsWeCanGive;
-        } else
+        }
+        else
         {
             // we can't give any rest in 25's coin
             if ((coinsOwed / 10) > 0)
@@ -39,7 +41,8 @@ int main(void)
                 coinsWeCanGive = coinsOwed - (coinsOwed % 10);
                 coinsCounter += coinsWeCanGive / 10;
                 coinsOwed -= coinsWeCanGive;
-            } else
+            }
+            else
             {
                 // we can't give any rest in 10's coin
                 if ((coinsOwed / 5) > 0)
@@ -49,7 +52,8 @@ int main(void)
                     coinsWeCanGive = coinsOwed - (coinsOwed % 5);
                     coinsCounter += coinsWeCanGive / 5;
                     coinsOwed -= coinsWeCanGive;
-                } else
+                }
+                else
                 {
                     // we can't give any rest in 5's coin
                     coinsCounter += coinsOwed;
@@ -57,7 +61,8 @@ int main(void)
                 }
             }
         }
-    } while (coinsOwed > 0);
+    }
+    while (coinsOwed > 0);
 
     // output
     printf("%i\n", coinsCounter);
